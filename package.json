@@ -21,6 +21,7 @@
         "test": "tests"
     },
     "dependencies": {
+        "@heroicons/react": "^2.2.0",
         "asynckit": "^0.4.0",
         "browserslist": "^4.24.4",
         "call-bind-apply-helpers": "^1.0.2",

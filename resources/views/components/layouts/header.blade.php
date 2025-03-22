@@ -1,6 +1,14 @@
 <header x-data="{ open: false }" class="bg-blue-600 text-white py-4 shadow-md w-full relative">
     <div class="container mx-auto flex justify-between items-center px-6">
-        <h1 class="text-lg font-semibold">My Dashboard</h1>
+        <h1>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-800" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="7" height="9" x="3" y="3" rx="1" />
+                <rect width="7" height="5" x="14" y="3" rx="1" />
+                <rect width="7" height="9" x="14" y="12" rx="1" />
+                <rect width="7" height="5" x="3" y="16" rx="1" />
+            </svg>
+        </h1>
+
 
         <!-- Tombol Burger Menu -->
         <button @click="open = !open" class="lg:hidden text-white focus:outline-none">
@@ -15,10 +23,7 @@
 
         <!-- Navigasi Desktop -->
         <nav class="hidden lg:flex space-x-4">
-            <a wire:navigate href="{{ route('dashboard') }}" class="px-4 py-2 rounded-md">
-                Dashboard
-            </a>
-            <div class="px-4 py-2 rounded-md" >
+            <div class="px-4 py-2 rounded-md">
                 <livewire:auth.logout />
             </div>
         </nav>
@@ -33,11 +38,14 @@
         x-transition:leave-start="opacity-100 translate-y-0"
         x-transition:leave-end="opacity-0 -translate-y-5"
         class="lg:hidden absolute w-full bg-blue-700 text-white top-full left-0 shadow-lg">
-        
+
         <div class="flex flex-col">
-            <a wire:navigate href="{{ route('dashboard') }}" 
+            <a wire:navigate href="{{ route('dashboard') }}"
                 class="block py-3 px-6 transition-colors duration-200 hover:bg-blue-800">
                 Dashboard
+            </a><a wire:navigate href="{{ route('projects') }}"
+                class="block py-3 px-6 transition-colors duration-200 hover:bg-blue-800">
+                Projects
             </a>
             <div class="block py-3 px-6 transition-colors duration-200 hover:bg-blue-800 cursor-pointer">
                 <livewire:auth.logout />

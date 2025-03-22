@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['monospace', 'sans-serif'],
+        sans: ['Cambria', 'sans-serif'],
       },
     },
   },
